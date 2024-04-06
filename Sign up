@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+
+    <div class="login-form">
+        <div class="input">
+         <form>
+            <h1>Personal Information</h1>
+            <label for="uname">Name:</label><br>
+             <input class="info" type="text" id="pass" name="pass" value="Enter your Full name"><br><br>
+
+            <p style="color: white;">Sex:</p>
+            <input type="radio" id="html" name="male" value="Male">
+            <label for="html">HTML</label><br>
+             <input type="radio" id="css" name="fem" value="Female"><br><br>
+
+
+             <label for="uname">birtday:</label><br>
+             <input class="info" type="text" id="pass" name="pass" value="Enter your Birthday"><br><br>
+
+             <label for="uname">Address</label><br>
+             <input class="info" type="text" id="pass" name="pass" value="Enter your address"><br><br>
+
+             <label for="uname">Age:</label><br>
+             <input class="info" type="text" id="pass" name="pass" value="Enter your Age"><br><br>
+
+
+
+
+
+            <h1>Sign up</h1>
+             <label for="uname">Email:</label><br>
+             <input class="info" type="text" id="pass" name="pass" value="Enter your Email address"><br><br>
+
+             <label  for="mnumber">Mobile No.:</label><br>
+             <input class="info" type="text" id="usern" name="usern" value="Enter your mobile number" ><br><br>
+
+             <label for="uname">Password:</label><br>
+             <input class="info" type="text" id="pass" name="pass" value="Enter password"><br><br>
+
+             <label  for="mnumber">Confirm your Password:</label><br>
+             <input class="info" type="text" id="usern" name="usern" value="Re-type your password" ><br><br>
+
+         <input class="submit" type="submit" value="Create Account"><br><br>
+
+       </form>
+     </div>
+</head>
+<body>
+
+</body>
+</html>
