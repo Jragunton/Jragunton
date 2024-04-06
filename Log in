@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup/login</title>
+</head>
+<body>
+    <div class="login-form">
+       <h1>Log in</h1>
+       <div class="input">
+        <form>
+            <label  for="fname">Enter Username:</label><br>
+            <input class="info" type="text" id="usern" name="usern" value="Username" ><br><br>
+            <label for="fname">Enter Password:</label><br>
+            <input class="info" type="text" id="pass" name="pass" value="Password"><br><br>
+       </div>
+        <div class="col"><p><u>Forgot Password?</u></p>
+        </div>
+
+        <input class="submit" type="submit" value="Log in"><br><br>
+        <div class="coloum">
+             <p class="new"> <a href="signup.html"><u>create new account</u></a></p>
+            </div>
+
+      </form>
+    </div>
+
+</body>
+</html>
