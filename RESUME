@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body style = "height: 900px; background-color:#837072;">
+
+<div id="container">    
+    <div id="d1">
+       
+    <div class="name">
+      <h1>Joebeb V. Ragunton</h1>
+    </div>
+
+    <div id="profile">
+      <p id="paragraph"> As a Bachelor of Science in Computer Science, I offer a solid 
+      foundation in computer science principles and programming languages. With a keen interest 
+      in software development and a drive for continual learning, I am poised to contribute
+       effectively to dynamic teams and projects within the tech industry.
+
+
+    <div id="contactinfo">    
+        <h3>Contacts</h3>
+            <dt id="phone">Phone</dt>
+                <dt>09106211386</dt><br>
+
+            <dt id="email">Email</dt>
+                <dt>raguntonjoeben@gmail.com</dt><br>
+
+            <dt id="address">Address</dt>
+                <dt>San Juan, Santa Lucia, Ilocos Sur</dt><br>
+    </div>
+
+    <div id="personinfo">
+        <h3>Personal Information</h3>
+            <dt id="bdate">Date Of Birth</dt>
+                <dt>April 09, 2003</dt><br>
+
+            <dt id="status">Marital Status</dt>
+                <dt>Single</dt> <br>
+
+            <dt id="citizen">Citizenship</dt>
+                <dt>Filipino</dt>
+    </div><br>
+
+    <div id="skills">
+        <h3>Skills</h3>
+        <ul id="listS">
+            
+            <li>adobe Photoshop</li>
+            <li>Wireframing</li>
+            <li>Prototyping</li>
+            <li>MS Word</li>
+            <li>MS Powerpoint Presentation</li>
+            <li>Web Dev.</li> </ul>
+    </div>
+
+    <div>
+        <h3 id="lang">Language</h3>
+            <ul id="listE">
+                <li>English</li>
+                <li>Tagalog</li>
+                <li>Iloco</li>
+            </ul>
+    </div>   
+
+</div>
+
+<div id="d2">
+
+    <div id="education">
+        <h3 id ="ed">Education</h3>
+            <dd>2021-2025</dd>
+            <dd style="font-weight: bold;">Bachelor of Science in Computer Science</dd>
+            <dd>University of Ilocos Philippines</dd>
+
+            <dd>2017-2021</dd>
+            <dd style="font-weight: bold;">High School Diploma</dd>
+            <dd>Sta. Lucia Academy</dd>
+
+            <dd>209-2014</dd>
+            <dd style="font-weight: bold;">Elementary Diploma</dd>
+            <dd>Sta. Lucia South Central School</dd>
+    
+    </div>
+
+    <div id = "reference">
+        <h3 id="ref">Reference</h3>
+            <dt id="t1" style = "font-weight: bold;">Joshua Ruiz</dt>
+                <dt>San Juan, Sta. Lucia, Ilocs Sur</dt>
+                <dt>0943-277-2076</dt>
+
+            <dt id="t2"style = "font-weight: bold;">Mark Harvey Toquero</dt>
+                <dt>San Juan, Sta. Lucia, Ilocs Su</dt>
+                <dt>0946-483-2284</dt>
+    </div>
+    </div>
+</div>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body style = "height: 900px; background-color:#837072;">
+
+<div id="container">    
+    <div id="d1">
+       
+    <div class="name">
+      <h1>Joebeb V. Ragunton</h1>
+    </div>
+
+    <div id="profile">
+      <p id="paragraph"> As a Bachelor of Science in Computer Science, I offer a solid 
+      foundation in computer science principles and programming languages. With a keen interest 
+      in software development and a drive for continual learning, I am poised to contribute
+       effectively to dynamic teams and projects within the tech industry.
+
+
+    <div id="contactinfo">    
+        <h3>Contacts</h3>
+            <dt id="phone">Phone</dt>
+                <dt>09106211386</dt><br>
+
+            <dt id="email">Email</dt>
+                <dt>raguntonjoeben@gmail.com</dt><br>
+
+            <dt id="address">Address</dt>
+                <dt>San Juan, Santa Lucia, Ilocos Sur</dt><br>
+    </div>
+
+    <div id="personinfo">
+        <h3>Personal Information</h3>
+            <dt id="bdate">Date Of Birth</dt>
+                <dt>April 09, 2003</dt><br>
+
+            <dt id="status">Marital Status</dt>
+                <dt>Single</dt> <br>
+
+            <dt id="citizen">Citizenship</dt>
+                <dt>Filipino</dt>
+    </div><br>
+
+    <div id="skills">
+        <h3>Skills</h3>
+        <ul id="listS">
+            
+            <li>adobe Photoshop</li>
+            <li>Wireframing</li>
+            <li>Prototyping</li>
+            <li>MS Word</li>
+            <li>MS Powerpoint Presentation</li>
+            <li>Web Dev.</li> </ul>
+    </div>
+
+    <div>
+        <h3 id="lang">Language</h3>
+            <ul id="listE">
+                <li>English</li>
+                <li>Tagalog</li>
+                <li>Iloco</li>
+            </ul>
+    </div>   
+
+</div>
+
+<div id="d2">
+
+    <div id="education">
+        <h3 id ="ed">Education</h3>
+            <dd>2021-2025</dd>
+            <dd style="font-weight: bold;">Bachelor of Science in Computer Science</dd>
+            <dd>University of Ilocos Philippines</dd>
+
+            <dd>2017-2021</dd>
+            <dd style="font-weight: bold;">High School Diploma</dd>
+            <dd>Sta. Lucia Academy</dd>
+
+            <dd>209-2014</dd>
+            <dd style="font-weight: bold;">Elementary Diploma</dd>
+            <dd>Sta. Lucia South Central School</dd>
+    
+    </div>
+
+    <div id = "reference">
+        <h3 id="ref">Reference</h3>
+            <dt id="t1" style = "font-weight: bold;">Joshua Ruiz</dt>
+                <dt>San Juan, Sta. Lucia, Ilocs Sur</dt>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body style = "height: 900px; background-color:#837072;">
+
+<div id="container">    
+    <div id="d1">
+       
+    <div class="name">
+      <h1>Joebeb V. Ragunton</h1>
+    </div>
+
+    <div id="profile">
+      <p id="paragraph"> As a Bachelor of Science in Computer Science, I offer a solid 
+      foundation in computer science principles and programming languages. With a keen interest 
+      in software development and a drive for continual learning, I am poised to contribute
+       effectively to dynamic teams and projects within the tech industry.
+
+
+    <div id="contactinfo">    
+        <h3>Contacts</h3>
+            <dt id="phone">Phone</dt>
+                <dt>09106211386</dt><br>
+
+            <dt id="email">Email</dt>
+                <dt>raguntonjoeben@gmail.com</dt><br>
+
+            <dt id="address">Address</dt>
+                <dt>San Juan, Santa Lucia, Ilocos Sur</dt><br>
+    </div>
+
+    <div id="personinfo">
+        <h3>Personal Information</h3>
+            <dt id="bdate">Date Of Birth</dt>
+                <dt>April 09, 2003</dt><br>
+
+            <dt id="status">Marital Status</dt>
+                <dt>Single</dt> <br>
+
+            <dt id="citizen">Citizenship</dt>
+                <dt>Filipino</dt>
+    </div><br>
+
+    <div id="skills">
+        <h3>Skills</h3>
+        <ul id="listS">
+            
+            <li>adobe Photoshop</li>
+            <li>Wireframing</li>
+            <li>Prototyping</li>
+            <li>MS Word</li>
+            <li>MS Powerpoint Presentation</li>
+            <li>Web Dev.</li> </ul>
+    </div>
+
+    <div>
+        <h3 id="lang">Language</h3>
+            <ul id="listE">
+                <li>English</li>
+                <li>Tagalog</li>
+                <li>Iloco</li>
+            </ul>
+    </div>   
+
+</div>
+
+<div id="d2">
+
+    <div id="education">
+        <h3 id ="ed">Education</h3>
+            <dd>2021-2025</dd>
+            <dd style="font-weight: bold;">Bachelor of Science in Computer Science</dd>
+            <dd>University of Ilocos Philippines</dd>
+
+            <dd>2017-2021</dd>
+            <dd style="font-weight: bold;">High School Diploma</dd>
+            <dd>Sta. Lucia Academy</dd>
+
+            <dd>209-2014</dd>
+            <dd style="font-weight: bold;">Elementary Diploma</dd>
+            <dd>Sta. Lucia South Central School</dd>
+    
+    </div>
+
+    <div id = "reference">
+        <h3 id="ref">Reference</h3>
+            <dt id="t1" style = "font-weight: bold;">Joshua Ruiz</dt>
+                <dt>San Juan, Sta. Lucia, Ilocs Sur</dt>
+                <dt>0943-277-2076</dt>
+
+            <dt id="t2"style = "font-weight: bold;">Mark Harvey Toquero</dt>
+                <dt>San Juan, Sta. Lucia, Ilocs Su</dt>
+                <dt>0946-483-2284</dt>
+    </div>
+    </div>
+</div>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body style = "height: 900px; background-color:#837072;">
+
+<div id="container">    
+    <div id="d1">
+       
+    <div class="name">
+      <h1>Joebeb V. Ragunton</h1>
+    </div>
+
+    <div id="profile">
+      <p id="paragraph"> As a Bachelor of Science in Computer Science, I offer a solid 
+      foundation in computer science principles and programming languages. With a keen interest 
+      in software development and a drive for continual learning, I am poised to contribute
+       effectively to dynamic teams and projects within the tech industry.
+
+
+    <div id="contactinfo">    
+        <h3>Contacts</h3>
+            <dt id="phone">Phone</dt>
+                <dt>09106211386</dt><br>
+
+            <dt id="email">Email</dt>
+                <dt>raguntonjoeben@gmail.com</dt><br>
+
+            <dt id="address">Address</dt>
+                <dt>San Juan, Santa Lucia, Ilocos Sur</dt><br>
+    </div>
+
+    <div id="personinfo">
+        <h3>Personal Information</h3>
+            <dt id="bdate">Date Of Birth</dt>
+                <dt>April 09, 2003</dt><br>
+
+            <dt id="status">Marital Status</dt>
+                <dt>Single</dt> <br>
+
+            <dt id="citizen">Citizenship</dt>
+                <dt>Filipino</dt>
+    </div><br>
+
+    <div id="skills">
+        <h3>Skills</h3>
+        <ul id="listS">
+            
+            <li>adobe Photoshop</li>
+            <li>Wireframing</li>
+            <li>Prototyping</li>
+            <li>MS Word</li>
+            <li>MS Powerpoint Presentation</li>
+            <li>Web Dev.</li> </ul>
+    </div>
+
+    <div>
+        <h3 id="lang">Language</h3>
+            <ul id="listE">
+                <li>English</li>
+                <li>Tagalog</li>
+                <li>Iloco</li>
+            </ul>
+    </div>   
+
+</div>
+
+<div id="d2">
+
+    <div id="education">
+        <h3 id ="ed">Education</h3>
+            <dd>2021-2025</dd>
+            <dd style="font-weight: bold;">Bachelor of Science in Computer Science</dd>
+            <dd>University of Ilocos Philippines</dd>
+
+            <dd>2017-2021</dd>
+            <dd style="font-weight: bold;">High School Diploma</dd>
+            <dd>Sta. Lucia Academy</dd>
+
+            <dd>209-2014</dd>
+            <dd style="font-weight: bold;">Elementary Diploma</dd>
+            <dd>Sta. Lucia South Central School</dd>
+    
+    </div>
+
+    <div id = "reference">
+        <h3 id="ref">Reference</h3>
+            <dt id="t1" style = "font-weight: bold;">Joshua Ruiz</dt>
+                <dt>San Juan, Sta. Lucia, Ilocs Sur</dt>
+                <dt>0943-277-2076</dt>
+
+            <dt id="t2"style = "font-weight: bold;">Mark Harvey Toquero</dt>
+                <dt>San Juan, Sta. Lucia, Ilocs Su</dt>
+                <dt>0946-483-2284</dt>
+    </div>
+    </div>
+</div>
+</body>
+</html>                <dt>0943-277-2076</dt>
+
+            <dt id="t2"style = "font-weight: bold;">Mark Harvey Toquero</dt>
+                <dt>San Juan, Sta. Lucia, Ilocs Su</dt>
+                <dt>0946-483-2284</dt>
+    </div>
+    </div>
+</div>
+</body>
+</html>
