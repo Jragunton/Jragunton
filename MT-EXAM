@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="myresum.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Resume</h1>
+            <nav>
+                <ul>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#trainings">Trainings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Welcome to My Resume</h2>
+                <p>Here you can learn about my skills, achievements, and trainings.</p>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <ul>
+                    <li>JavaScript</li>
+                    <li>Html</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+        </section>
+        <section id="achievements">
+            <div class="container">
+                <h2>Achievements</h2>
+                <ul>
+                    <li>Leadership Awards</li>
+                    <li>Strategic Excellence in IT</li>
+                </ul>
+            </div>
+        </section>
+        <section id="trainings">
+            <div class="container">
+                <h2>Trainings</h2>
+                <ul>
+                    <li>Python Programming</li>
+                    <li>Certified Information Systems Security Professional </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <aside>
+        <div class="container">
+            <img src="assets/professional_photo.jpg" alt="Professional Photo">
+        </div>
+    </aside>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Resume</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
