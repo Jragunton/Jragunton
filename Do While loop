@@ -1,0 +1,29 @@
+//program that prompts user to enter a password
+const correctPass = 'j03Ben!019'; // a hardcoded password
+let passEnter = ''; // Initialize user input
+
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function askPassword() {
+    readline.question('Enter the password: ', (input) => {
+        userEnter = input;
+
+        // Use a do-while loop to keep asking for the password until it matches
+        do {
+            if (userEnter === correctPass) {
+                // log a success message to the console when correct password is entered
+                console.log('Successfully! you entered the Password correctly.');
+                readline.close(); // End the program
+                return;
+            } else {
+                console.log('Oops! Incorrect password. Please Try again.');
+                return askPassword(); // Keep asking if the password is wrong
+            }
+        } while (userEnter !== correctPass);
+    });
+}
+
+askPassword(); // Start the password promptl
