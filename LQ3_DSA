@@ -1,0 +1,197 @@
+// Simple Data Setup: Ticket Persons and Buses
+const ticketPersons = [{ username: "admin", password: "admin123" }];  // Simple list for ticket persons
+const buses = [
+    { busName: "Pasay", seats: Array(40).fill(null) },  // 40 seats, null means available
+    { busName: "Avenida", seats: Array(40).fill(null) },
+    { busName: "Isabela", seats: Array(40).fill(null) }
+];
+
+// Function to authenticate ticket person
+function authenticateTicketPerson() {
+    const username = prompt("Enter username:");
+    const password = prompt("Enter password:");
+    for (const person of ticketPersons) {
+        if (person.username === username && person.password === password) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Function to view seats in a bus
+function viewBus(bus) {
+    alert(`Bus Name: ${bus.busName}`);
+    bus.seats.forEach((seat, index) => {
+        if (seat === null) {
+            alert(`Seat ${index + 1}: AVAILABLE`);
+        } else {
+            alert(`Seat ${index + 1}: Reserved by ${seat}`);
+        }
+    });
+}
+
+// Function to add reservation
+function addReservation(bus) {
+    const availableSeats = bus.seats.map((seat, index) => seat === null ? index : null).filter(index => index !== null);
+    if (availableSeats.length === 0) {
+        alert("Sorry, this bus is fully booked.");
+        return;
+    }
+
+    const seatChoice = parseInt(prompt(`Available seats: ${availableSeats.join(", ")}. Choose a seat number to reserve (1-30):`)) - 1;
+    if (!availableSeats.includes(seatChoice)) {
+        alert("Invalid seat choice. Please choose an available seat.");
+        return;
+    }
+    
+    const customerName = prompt("Enter customer name:");
+    bus.seats[seatChoice] = customerName;
+    alert(`Reservation successful for ${customerName} on seat ${seatChoice + 1}.`);
+}
+
+// Function to remove reservation
+function removeReservation(bus) {
+    const reservedSeats = bus.seats.map((seat, index) => seat !== null ? { seat: index, customer: seat } : null).filter(seat => seat !== null);
+    if (reservedSeats.length === 0) {
+        alert("No reservations to remove.");
+        return;
+    }
+
+    const seatChoice = parseInt(prompt(`Reserved seats: ${reservedSeats.map(res => `Seat ${res.seat + 1}: ${res.customer}`).join(", ")}. Choose seat number to cancel (1-30):`)) - 1;
+    if (bus.seats[seatChoice] === null) {
+        alert("Invalid choice or seat is available.");
+        return;
+    }
+
+    const customerName = bus.seats[seatChoice];
+    const confirm = prompt(`Are you sure you want to cancel the reservation for ${customerName}? (y/n):`).toLowerCase();
+    if (confirm === 'y') {
+        bus.seats[seatChoice] = null;
+        alert(`Reservation for seat ${seatChoice + 1} canceled.`);
+    } else {
+        alert("Reservation not canceled.");
+    }
+}
+
+// Customer functions
+function viewAvailableBuses() {
+    let busesList = "Available Buses:\n";
+    buses.forEach((bus, index) => {
+        busesList += `${index + 1}. ${bus.busName}\n`;
+    });
+    alert(busesList);
+}
+
+function reserveSeat() {
+    viewAvailableBuses();
+    const busChoice = parseInt(prompt("Choose bus (1-3):")) - 1;
+    if (busChoice >= 0 && busChoice < buses.length) {
+        const bus = buses[busChoice];
+        const availableSeats = bus.seats.map((seat, index) => seat === null ? index : null).filter(index => index !== null);
+        if (availableSeats.length === 0) {
+            alert("Sorry, this bus is fully booked.");
+            return;
+        }
+
+        const seatChoice = parseInt(prompt(`Available seats in ${bus.busName}: ${availableSeats.join(", ")}. Choose a seat number to reserve (1-40):`)) - 1;
+        if (!availableSeats.includes(seatChoice)) {
+            alert("Invalid seat choice. Please choose an available seat.");
+            return;
+        }
+
+        const customerName = prompt("Enter your name:");
+        bus.seats[seatChoice] = customerName;
+        alert(`Reservation successful for ${customerName} on seat ${seatChoice + 1}.`);
+    } else {
+        alert("Invalid bus choice.");
+    }
+}
+
+function cancelReservation() {
+    viewAvailableBuses();
+    const busChoice = parseInt(prompt("Choose bus (1-3):")) - 1;
+    if (busChoice >= 0 && busChoice < buses.length) {
+        const bus = buses[busChoice];
+        const reservedSeats = bus.seats.map((seat, index) => seat !== null ? { seat: index, customer: seat } : null).filter(seat => seat !== null);
+        if (reservedSeats.length === 0) {
+            alert("No reservations found for this bus.");
+            return;
+        }
+
+        const seatChoice = parseInt(prompt(`Reserved seats: ${reservedSeats.map(res => `Seat ${res.seat + 1}: ${res.customer}`).join(", ")}. Choose seat number to cancel (1-30):`)) - 1;
+        if (bus.seats[seatChoice] === null) {
+            alert("Invalid seat choice.");
+            return;
+        }
+
+        const customerName = bus.seats[seatChoice];
+        const confirm = prompt(`Are you sure you want to cancel reservation for ${customerName}? (y/n):`).toLowerCase();
+        if (confirm === 'y') {
+            bus.seats[seatChoice] = null;
+            alert(`Reservation for seat ${seatChoice + 1} canceled.`);
+        } else {
+            alert("Reservation not canceled.");
+        }
+    } else {
+        alert("Invalid bus choice.");
+    }
+}
+
+// Main Program Loop
+function main() {
+    const role = prompt("Are you a TICKET PERSON or a CUSTOMER?").toLowerCase();
+    if (role === "ticket person") {
+        const authenticated = authenticateTicketPerson();
+        if (authenticated) {
+            let menuChoice;
+            do {
+                menuChoice = prompt("\n1. View Bus\n2. Manage Bus\n3. Logout\nChoose action:");
+                if (menuChoice === "1") {
+                    const busChoice = parseInt(prompt("Choose bus to view (1-3):")) - 1;
+                    if (busChoice >= 0 && busChoice < buses.length) {
+                        viewBus(buses[busChoice]);
+                    } else {
+                        alert("Invalid bus choice.");
+                    }
+                } else if (menuChoice === "2") {
+                    const manageChoice = prompt("\n1. Add Reservation\n2. Remove Reservation\n3. Back to Menu\nChoose action:");
+                    if (manageChoice === "1") {
+                        const busChoice = parseInt(prompt("Choose bus to add reservation (1-3):")) - 1;
+                        if (busChoice >= 0 && busChoice < buses.length) {
+                            addReservation(buses[busChoice]);
+                        } else {
+                            alert("Invalid bus choice.");
+                        }
+                    } else if (manageChoice === "2") {
+                        const busChoice = parseInt(prompt("Choose bus to remove reservation (1-3):")) - 1;
+                        if (busChoice >= 0 && busChoice < buses.length) {
+                            removeReservation(buses[busChoice]);
+                        } else {
+                            alert("Invalid bus choice.");
+                        }
+                    }
+                }
+            } while (menuChoice !== "3");
+            alert("Logging out.");
+        } else {
+            alert("Authentication failed.");
+        }
+    } else if (role === "customer") {
+        let customerChoice;
+        do {
+            customerChoice = prompt("\n1. Reserve Seat\n2. Cancel Reservation\n3. Exit\nChoose action:");
+            if (customerChoice === "") {
+                reserveSeat();
+            } else if (customerChoice === "2") {
+                cancelReservation();
+            }
+        } while (customerChoice !== "3");
+        alert("Exiting.");
+    } else {
+        alert("Invalid role. Please choose between 'TICKET PERSON' or 'CUSTOMER'.");
+    }
+}
+
+// Run the program
+main();
+
