@@ -1,0 +1,71 @@
+// Hash function to generate a key for the customer's namefunction 
+hashFunction(name) {
+            let hash = 0;
+            for (let i = 0; i < name.length; i++) {
+                hash += name.charCodeAt(i) * (i + 1);
+            }
+            return hash % 100; // Modulo to keep hash values manageable
+        }
+
+        // Hashed table to store customer data
+        let customerTable = {};
+
+        // Display the current hashed table
+        function displayHashedTable() {
+            console.log("Updated Hashed Table:");
+            Object.entries(customerTable).forEach(([key, value], index) => {
+                console.log(`${index + 1}. Key: ${key}, Name: ${value}`);
+            });
+        }
+
+        function queueingSystemWithHash() {
+            console.log("Welcome to the Customer Service Queueing System with Hash Function!");
+
+            // Pre-fill the table with initial customers
+            ['Elaine', 'Althea', 'Angelo', 'Lito', 'Engelbert'].forEach(name => {
+                const hashKey = hashFunction(name);
+                customerTable[hashKey] = name;
+            });
+            displayHashedTable();
+
+            while (true) {
+                const action = prompt("Choose an action: Enter 'add' to add a customer, 'serve' to serve a customer, or 'exit' to quit.").toLowerCase();
+
+                if (action === 'add') {
+                    const customerName = prompt("Enter the customer's name:");
+                    if (customerName) {
+                        const hashKey = hashFunction(customerName);
+                        if (customerTable[hashKey]) {
+                            alert("Collision detected! Please use a different name.");
+                        } else {
+                            customerTable[hashKey] = customerName;
+                            alert(`${customerName} has been added to the hashed table with key ${hashKey}.`);
+                            displayHashedTable();
+                        }
+                    } else {
+                        alert("Invalid name. Please try again.");
+                    }
+                } else if (action === 'serve') {
+                    if (Object.keys(customerTable).length === 0) {
+                        alert("The hashed table is empty. No customers to serve.");
+                    } else {
+                        const keyToServe = parseInt(prompt("Enter the hash key of the customer to serve:"), 10);
+                        if (customerTable[keyToServe]) {
+                            const servedCustomer = customerTable[keyToServe];
+                            delete customerTable[keyToServe];
+                            alert(`Serving customer: ${servedCustomer}`);
+                            displayHashedTable();
+                        } else {
+                            alert("Invalid key. Please try again.");
+                        }
+                    }
+                } else if (action === 'exit') {
+                    alert("Exiting the system. Goodbye!");
+                    break;
+                } else {
+                    alert("Invalid action. Please enter 'add', 'serve', or 'exit'.");
+                }
+            }
+        }
+
+        queueingSystemWithHash();
